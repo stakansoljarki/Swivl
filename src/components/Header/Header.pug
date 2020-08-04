@@ -1,1 +1,10 @@
-header.header Header
+header.header
+  .header__container.container
+    .header__logo-box
+      img.header__logo(
+        src="../../components/Header/images/logo-icon.svg",
+        alt="Synth - logo icon"
+      )
+    include ../../components/Profile/profile
+  .header__nav-box.container
+    include ../../components/Navigation/navigation
