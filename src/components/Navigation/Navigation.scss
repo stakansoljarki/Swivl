@@ -24,15 +24,16 @@
 
 		&:after {
 			position: absolute;
-			bottom: -23px;
+			bottom: 0;
 			left: 50%;
 
 			width: 0;
 			height: 4px;
 
 			content: "";
-			transition: width 0.2s ease;
+			transition: bottom 0.2s ease-out;
 			transform: translateX(-50%);
+			text-align: center;
 
 			background: linear-gradient(175deg, #ff974f 0%, #e32c75 100%);
 			}
@@ -41,12 +42,49 @@
 			opacity: 1;
 
 			&:after {
+				bottom: -23px;
+
 				width: 100%;
 				}
 			}
 
 		&:hover {
 			opacity: 1;
+			}
+		}
+	&__button {
+		position: absolute;
+		z-index: 1;
+		right: 15px;
+		bottom: -55px;
+
+		width: 64px;
+		height: 64px;
+
+		cursor: pointer;
+
+		border-radius: 50%;
+		background: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+
+		&:before, &:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			content: "";
+			transform: translate(-50%, -50%);
+
+			background: $color-white;
+			}
+
+		&:before {
+			width: 20px;
+			height: 2px;
+			}
+
+		&:after {
+			width: 2px;
+			height: 20px;
 			}
 		}
 	}

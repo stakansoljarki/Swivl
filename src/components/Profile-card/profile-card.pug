@@ -42,6 +42,18 @@
         p.profile-card__stats-subtitle= statsItem.subtitle
   - var profileDescription = 'Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum.';
     p.profile-card__description #{profileDescription}
-  .profile-card__information-inner
-    .profile-card__information-button
-      span.profile-card__information-span
+  .profile-card__report
+    .profile-card__report-button
+      span.profile-card__report-span
+    .profile-card__report-card
+      -
+        var reportCardList = [
+            {
+                item: 'Report User'
+            },
+            {
+                item: 'Block User'
+            }
+        ]
+      each reportCardItem in reportCardList
+        a.profile-card__report-link(href="#")= reportCardItem.item

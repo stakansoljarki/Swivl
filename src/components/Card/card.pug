@@ -1,2 +1,23 @@
-.card
-  .card__title
+article.card
+  if cardItem.cardShareTag
+    .card__header
+      p.card__share Shared to
+        span.card__share-tag= cardItem.cardShareTag
+  if cardItem.cardShareLink
+    .card__header
+      a.card__link(href="#")= cardItem.cardShareLink
+  h2.card__title= cardItem.title
+  if cardItem.cardFooterShare
+    .card__footer
+      .card__author-box
+        .card__author-logo
+        a.card__author-name(href="#")= cardItem.cardFooterShare
+      a.card__footer-share(href="#") Share
+  if cardItem.cardFooterStats
+    .card__footer
+      .card__author-box
+        .card__author-logo
+        a.card__author-name(href="#")= cardItem.cardFooterStats
+      .card__stats-block
+        p.card__stats-item 88
+        p.card__stats-item 24

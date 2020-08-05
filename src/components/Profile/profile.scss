@@ -60,3 +60,14 @@
 		transform: translate(-50%, -50%);
 		}
 	}
+@media only screen and (max-width: 410px) {
+	.profile {
+		flex-direction: column;
+		&__inner {
+			justify-content: flex-end;
+			&:not(:last-child) {
+				margin-right: 0;
+				}
+			}
+		}
+	}

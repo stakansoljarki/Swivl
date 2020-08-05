@@ -4,3 +4,26 @@ section.main
     .main__cards-box
       include ../../components/Privacy/privacy
       .main__cards-inner
+        -
+          var mainCardsList = [
+              {
+                  title: 'New air routes that promise cheap flights in',
+                  cardFooterShare: 'Gregory Watkins'
+              },
+              {
+                  title: 'New air routes that promise cheap flights in',
+                  cardFooterShare: 'Gregory Watkins'
+              },
+              {
+                  cardShareTag: '#discussionaboutanimgttddsrrrrrrrrrrrrrrrrr...',
+                  title: 'New air routes that promise cheap flights in',
+                  cardFooterStats: 'Gregory Watkins'
+              },
+              {
+                  cardShareLink: 'Shared via weblink',
+                  title: 'New air routes that promise cheap flights in',
+                  cardFooterStats: 'Gregory Watkins'
+              }
+          ]
+        each cardItem in mainCardsList
+          include ../../components/Card/card

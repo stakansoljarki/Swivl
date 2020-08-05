@@ -1,8 +1,9 @@
 .profile-card {
 	position: relative;
 
-	max-width: 350px;
-	margin-right: 47px;
+	min-width: 310px;
+	max-width: 29.9%;
+	margin-right: 4%;
 
 	&__information-box {
 		display: flex;
@@ -43,7 +44,7 @@
 
 		padding-left: 28px;
 
-		color: #f05d63;
+		color: $color-red;
 
 		line-height: 20px;
 
@@ -61,55 +62,6 @@
 
 			background: url("../../components/Profile-card/images/edit-icon.svg") no-repeat center;
 			}
-		}
-
-	&__information-inner {
-		position: absolute;
-		top: 0;
-		right: 15px;
-		}
-
-	&__information-button {
-		position: relative;
-
-		width: 24px;
-		height: 24px;
-
-		cursor: pointer;
-		}
-
-	&__information-span {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-
-		display: block;
-
-		transform: translate(-50%, -50%);
-
-		&:before, &:after {
-			position: absolute;
-			left: 50%;
-
-			content: "";
-			transform: translateX(-50%);
-			}
-
-		&:before {
-			top: -6px;
-			}
-
-		&:after {
-			bottom: -6px;
-			}
-		}
-
-	&__information-span, &__information-span:before, &__information-span:after {
-		width: 4px;
-		height: 4px;
-
-		border-radius: 50%;
-		background-color: $color-main;
 		}
 
 	&__stats-block {
@@ -144,5 +96,141 @@
 
 		font-size: 16px;
 		line-height: 24px;
+		}
+	&__report {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		}
+
+	&__report-button {
+		position: relative;
+
+		width: 24px;
+		height: 24px;
+
+		cursor: pointer;
+		}
+
+	&__report-span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		display: block;
+
+		transform: translate(-50%, -50%);
+
+		&:before, &:after {
+			position: absolute;
+			left: 50%;
+
+			content: "";
+			transform: translateX(-50%);
+			}
+
+		&:before {
+			top: -6px;
+			}
+
+		&:after {
+			bottom: -6px;
+			}
+		}
+
+	&__report-span, &__report-span:before, &__report-span:after {
+		width: 4px;
+		height: 4px;
+
+		border-radius: 50%;
+		background-color: $color-main;
+		}
+	&__report-card {
+		position: absolute;
+		top: 40px;
+
+		display: none;
+
+		width: max-content;
+		padding: 24px 0;
+
+		opacity: 0.94;
+		border-radius: 8px;
+		background: $color-white;
+
+		backdrop-filter: blur(21.7463px);
+		&--active {
+			display: block;
+			}
+		}
+	&__report-link {
+		position: relative;
+
+		display: block;
+
+		padding: 8px 23px 8px 59px;
+
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 22px;
+		&:hover {
+			background-color: $main-background-color;
+
+			mix-blend-mode: normal;
+			backdrop-filter: blur(54.3656px);
+			}
+		&:first-child {
+			&:before {
+				background: url("../../components/Profile-card/images/report-icon.svg") no-repeat center;
+				}
+			}
+		&:last-child {
+			&:before {
+				background: url("../../components/Profile-card/images/delete-icon.svg") no-repeat center;
+				}
+			}
+		&:first-child:before,
+		&:last-child:before {
+			position: absolute;
+			top: 50%;
+			left: 24px;
+
+			width: 20px;
+			height: 20px;
+
+			content: "";
+			transform: translateY(-50%);
+			}
+		}
+	}
+@media only screen and (max-width: 860px) {
+	.profile-card {
+		min-width: 0;
+		&__information-box {
+			flex-direction: column;
+			}
+		&__img-box {
+			margin-right: 0;
+			margin-bottom: 10px;
+			}
+		&__information {
+			max-width: 100%;
+			}
+		}
+	}
+@media only screen and (max-width: 767px) {
+	.profile-card {
+		max-width: 450px;
+		margin-right: 0;
+		margin-bottom: 25px;
+		&__information {
+			max-width: 145px;
+			}
+		&__report {
+			right: 0;
+			}
+		&__report-card {
+			right: 10px;
+			}
 		}
 	}
