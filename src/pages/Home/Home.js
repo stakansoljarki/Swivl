@@ -1,8 +1,8 @@
 import "./Home.scss";
-import { Privacy } from "../../components/Privacy/privacy-button";
-import { Report } from "../../components/Profile-card/report-button";
-import { Navigation } from "../../components/Navigation/navigation";
+import { privacyButton } from "../../components/Privacy/privacy-button";
+import { reportButton } from "../../components/Profile-card/report-button";
+import { navLink } from "../../components/Navigation/navigation";
 
-Privacy();
-Report();
-Navigation();
+privacyButton();
+reportButton();
+navLink();
