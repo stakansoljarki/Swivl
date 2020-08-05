@@ -1,0 +1,60 @@
+.profile-card
+  .profile-card__information-box
+    .profile-card__img-box
+      img.profile-card__img(
+        src="../../components/Profile-card/images/avatar.png",
+        alt="avatar image"
+      )
+    .profile-card__information
+      - var profileCardTitle = 'Benjamin Clementine';
+        h2.profile-card__information-title #{profileCardTitle}
+      -
+        var informationList = [
+            {
+                informationClass: 'profile-card__information-link',
+                text: '@benclementine'
+            },
+            {
+                informationClass: 'profile-card__information-edit',
+                text: 'Edit Profile'
+            }
+        ]
+      each informationItem in informationList
+        a(class=informationItem.informationClass, href="#")= informationItem.text
+  .profile-card__stats-block
+    -
+      var statsList = [
+          {
+              title: '45',
+              subtitle: 'synths'
+          },
+          {
+              title: '110',
+              subtitle: 'followers'
+          },
+          {
+              title: '322',
+              subtitle: 'following'
+          }
+      ]
+    each statsItem in statsList
+      .profile-card__stats-inner
+        p.profile-card__stats-title= statsItem.title
+        p.profile-card__stats-subtitle= statsItem.subtitle
+  - var profileDescription = 'Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum.';
+    p.profile-card__description #{profileDescription}
+  .profile-card__report
+    .profile-card__report-button
+      span.profile-card__report-span
+    .profile-card__report-card
+      -
+        var reportCardList = [
+            {
+                item: 'Report User'
+            },
+            {
+                item: 'Block User'
+            }
+        ]
+      each reportCardItem in reportCardList
+        a.profile-card__report-link(href="#")= reportCardItem.item

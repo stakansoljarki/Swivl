@@ -1,0 +1,36 @@
+.profile
+  .profile__inner
+    - var profileTitle = 'Arthur Wood';
+    p.profile__title #{profileTitle}
+    .profile__avatar-box
+      img.profile__avatar(
+        src="../../components/Profile/images/avatar.png",
+        alt="Avatar icon"
+      )
+    button.profile__button
+      img.profile__button-icon(
+        src="../../components/Profile/images/arrow-icon.svg",
+        alt="Arrow icon"
+      )
+  .profile__inner
+    -
+      var profileLinkList = [
+          {
+              src: '../../components/Profile/images/notification-icon.svg',
+              alt: 'Notification icon'
+          },
+          {
+              src: '../../components/Profile/images/share-recap-icon.svg',
+              alt: 'Gift icon'
+          },
+          {
+              src: '../../components/Profile/images/medium-icon.svg',
+              alt: 'Medium icon'
+          }
+      ]
+    each profileLinkItem in profileLinkList
+      a.profile__link
+        img.profile__link-icon(
+          src=profileLinkItem.src,
+          alt=profileLinkItem.alt
+        )
